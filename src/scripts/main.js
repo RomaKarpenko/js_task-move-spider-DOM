@@ -22,10 +22,10 @@ document.addEventListener('click', (e) => {
   const relativeY =
     e.clientY - wallRect.top - wallBorder - spiderRect.height / 2;
 
-  const spiderX = clamp(relativeX, 0, wall.clientWidth - spiderRect.width);
-  const spiderY = clamp(relativeY, 0, wall.clientHeight - spiderRect.height);
+  const X = clamp(relativeX, 0, wall.clientWidth - spiderRect.width);
+  const Y = clamp(relativeY, 0, wall.clientHeight - spiderRect.height);
 
   spider.style.position = 'absolute';
-  spider.style.left = `${spiderX}px`;
-  spider.style.top = `${spiderY}px`;
+  spider.style.left = `${X}px`;
+  spider.style.top = `${Y}px`;
 });
